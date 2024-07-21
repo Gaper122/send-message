@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="main.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playwrite+NO:wght@100..400&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="continar">
+      <div class="massage-card">
+        <div class="logo">
+          <img src="op.jpg" />
+        </div>
+        <div class="title">
+          <h1>send your massage</h1>
+        </div>
+        <form action="" onsubmit="sendEmail(); reset();return false;">
+          <input type="text" id="name" placeholder="your name" required />
+          <input type="number" id="Phone" placeholder="your Phone" required />
+          <input
+            type="email"
+            id="email"
+            placeholder="enter your email"
+            require
+          />
+          <textarea name="subject" id="message"></textarea>
+          <button id="submit">send</button>
+        </form>
+      </div>
+    </div>
+
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script>
+      function sendEmail() {
+        Email.send({
+          SecureToken: "c667aca2-50bf-474f-b6b0-adc470dec126",
+          To: "gapermohamadalonsh@gmail.com",
+          From: "gapermohamadalonsh@gmail.com",
+          Subject: "test gaper",
+          Body:
+            "name:" +
+            document.getElementById["name"].value +
+            "<br>number: " +
+            document.getElementById["Phone"].value +
+            "<br>email:" +
+            document.getElementById["email"].value +
+            "<br>subject:" +
+            document.getElementById["message"].value,
+        }).then((message) => alert("message send sucscesful"));
+      }
+    </script>
+  </body>
+</html>
