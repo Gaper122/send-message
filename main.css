@@ -83,7 +83,7 @@ form input, textarea{
     border-radius: 10px;
     border: none;
     outline: none;
-    width: 305px;
+    width: 300px;
     display: flex;
     flex-direction: column;
 }
